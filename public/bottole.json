@@ -1,0 +1,49 @@
+const waterBottles = [
+  {
+    id: 1,
+    brand: "Hydro Flask",
+    capacity: "32oz",
+    material: "Stainless Steel",
+    color: "Black",
+    price: 39.99,
+    img: "https://example.com/hydroflask.jpg"
+  },
+  {
+    id: 2,
+    brand: "Nalgene",
+    capacity: "1L",
+    material: "Plastic",
+    color: "Blue",
+    price: 12.99,
+    img: "https://example.com/nalgene.jpg"
+  },
+  {
+    id: 3,
+    brand: "CamelBak",
+    capacity: "750ml",
+    material: "Plastic",
+    color: "Red",
+    price: 14.99,
+    img: "https://example.com/camelbak.jpg"
+  },
+  {
+    id: 4,
+    brand: "Contigo",
+    capacity: "24oz",
+    material: "Stainless Steel",
+    color: "Silver",
+    price: 22.49,
+    img: "https://example.com/contigo.jpg"
+  },
+  {
+    id: 5,
+    brand: "S'well",
+    capacity: "17oz",
+    material: "Stainless Steel",
+    color: "White",
+    price: 25.00,
+    img: "https://example.com/swell.jpg"
+  }
+];
+
+console.log(waterBottles);
