@@ -4,7 +4,8 @@ import { Suspense } from 'react'
 import './App.css'
 import Bottoles from './Components/Bottoles/Bottoles'
 
-const bottolesPromise=fetch('/bottole.json')
+const bottolesPromise = fetch('bottole.json')
+.then(res=>res.json())
 
 function App() {
   
