@@ -1,6 +1,7 @@
 import React, { use } from 'react';
+
 import Bottole from './Bottole/Bottole';
-import 'Bottles.css'
+
 
 const Bottoles = ({ bottolesPromise }) => {
   
@@ -9,7 +10,8 @@ const Bottoles = ({ bottolesPromise }) => {
   return (
     <div>
       <h2>Bottole:{bottole.length}</h2>
-      <div className='bottole-container'>{
+<div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}>
+      {
        bottole.map(bottle=><Bottole key={bottle.id} bottle={bottle}></Bottole>)
       }</div>
     </div>
