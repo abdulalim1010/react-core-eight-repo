@@ -15,7 +15,7 @@ shipping,stock
       <h3>{seller}</h3>
       <p>{ shipping}</p>
       <p>{stock}</p>
-      <button onClick={handleAddToCart}>Buy Now</button></div>
+      <button onClick={()=>handleAddToCart(bottle)}>Buy Now</button></div>
 </div>
   );
 };
