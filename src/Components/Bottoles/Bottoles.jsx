@@ -1,6 +1,7 @@
 import React, { use, useState } from 'react';
 
 import Bottole from './Bottole/Bottole';
+import { addToStorCart } from '../../utilities/LocalStorage';
 
 
 const Bottoles = ({ bottolesPromise }) => {
@@ -11,18 +12,19 @@ const Bottoles = ({ bottolesPromise }) => {
 
     const newCart = [...cart, bottle];
     setCart(newCart);
+    addToStorCart(bottle.id);
   }
   //console.log(bottole)
   return (
     <div>
       <h2>Bottole:{bottole.length}</h2>
       <p>Added to cart:{cart.length}</p>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap:"10px",borderRadius:"10px" }}>
-      {
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px", borderRadius: "10px" }}>
+        {
           bottole.map(bottle => <Bottole key={bottle.id}
-        handleAddToCart={handleAddToCart}
+            handleAddToCart={handleAddToCart}
             bottle={bottle}></Bottole>)
-      }</div>
+        }</div>
     </div>
   );
 };
