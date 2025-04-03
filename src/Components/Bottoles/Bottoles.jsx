@@ -2,6 +2,7 @@ import React, { use, useState } from 'react';
 
 import Bottole from './Bottole/Bottole';
 import { addToStorCart } from '../../utilities/LocalStorage';
+import Cart from '../Cart/Cart';
 
 
 const Bottoles = ({ bottolesPromise }) => {
@@ -19,6 +20,7 @@ const Bottoles = ({ bottolesPromise }) => {
     <div>
       <h2>Bottole:{bottole.length}</h2>
       <p>Added to cart:{cart.length}</p>
+      <Cart cart={cart }></Cart>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px", borderRadius: "10px" }}>
         {
           bottole.map(bottle => <Bottole key={bottle.id}
