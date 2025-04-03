@@ -15,12 +15,19 @@ const Bottoles = ({ bottolesPromise }) => {
     setCart(newCart);
     addToStorCart(bottle.id);
   }
+  const handlRemoveCart = id => {
+    console.log('remove item from the cart', id)
+    const remaningCart = cart.filter(bottle => bottle.id !== id);
+    setCart(remaningCart);
+}
+
+
   //console.log(bottole)
   return (
     <div>
       <h2>Bottole:{bottole.length}</h2>
       <p>Added to cart:{cart.length}</p>
-      <Cart cart={cart }></Cart>
+      <Cart cart={cart } handlRemoveCart={handlRemoveCart}></Cart>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px", borderRadius: "10px" }}>
         {
           bottole.map(bottle => <Bottole key={bottle.id}
